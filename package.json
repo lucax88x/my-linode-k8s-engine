@@ -6,7 +6,8 @@
     "init": "terraform init",
     "plan": "terraform plan -var-file='secret.tfvars'",
     "apply": "terraform apply -var-file='secret.tfvars'",
-    "output": "terraform output dashboard & terraform output kubeconfig",
+    "output:dashboard": "terraform output dashboard",
+    "output:kubeconfig": "terraform output kubeconfig | xargs | base64 --decode",
     "destroy": "terraform destroy -var-file='secret.tfvars'"
   },
   "keywords": [],
